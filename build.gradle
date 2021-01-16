@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+apply plugin: 'application'
+mainClassName = "io.github.youfantan.articles.MSADemo.Utils"
+applicationDefaultJvmArgs = [
+        '-Djava.library.path=native'
+]
+group 'io.github.youfantan.articles.MSADemo'
+version '1.0-RELESASE'
+
+repositories {
+    mavenLocal()
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile 'com.alibaba:fastjson:1.2.75'
+    compile 'org.apache.httpcomponents:httpclient:4.5.13'
+    compile fileTree(dir: 'libraries', includes: ['*.jar'])
+}
+
+test {
+    useJUnitPlatform()
+}
