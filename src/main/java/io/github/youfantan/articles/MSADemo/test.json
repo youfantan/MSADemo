@@ -1,7 +1,0 @@
-{
-  "client_id": "00000000402b5328",
-  "code": "M.R3_BAY.97cbe30c-bb0a-9e72-1f14-7b2f541520b9&lc=2052",
-  "grant_type": "authorization_code",
-  "redirect_url": "https://login.live.com/oauth20_desktop.srf",
-  "scope": "service::user.auth.xboxlive.com::MBI_SSL"
-}
